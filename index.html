@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sanwariya Enterprises</title>
+
+<style>
+body {
+  margin:0;
+  font-family: Arial;
+  background:#f5f6fa;
+}
+
+/* Header */
+header {
+  background: linear-gradient(90deg,#0a3d62,#3c6382);
+  color:white;
+  padding:20px;
+  text-align:center;
+}
+
+/* Container */
+.container {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  padding:15px;
+}
+
+/* Card */
+.card {
+  background:white;
+  width:260px;
+  margin:10px;
+  padding:15px;
+  border-radius:12px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  text-align:center;
+}
+
+/* Image box */
+.img-box {
+  height:150px;
+  background:#ddd;
+  border-radius:10px;
+  margin-bottom:10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* Button */
+.btn {
+  background:#25D366;
+  color:white;
+  padding:10px;
+  border:none;
+  border-radius:5px;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+.btn:hover {
+  background:#1ebe5d;
+}
+
+/* Footer */
+footer {
+  background:#0a3d62;
+  color:white;
+  text-align:center;
+  padding:15px;
+  margin-top:20px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+  <h1>Sanwariya Enterprises</h1>
+  <p>Inverter | Battery | Solar | Lithium Manufacturer</p>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <div class="img-box">72V Battery</div>
+    <h3>72V 29Ah Lithium Battery</h3>
+    <p>₹33,000</p>
+    <button class="btn" onclick="orderWhatsApp('72V 29Ah Lithium Battery','33000')">
+      Order on WhatsApp
+    </button>
+  </div>
+
+  <div class="card">
+    <div class="img-box">60V Battery</div>
+    <h3>60V 26Ah Lithium Battery</h3>
+    <p>₹28,000</p>
+    <button class="btn" onclick="orderWhatsApp('60V 26Ah Lithium Battery','28000')">
+      Order on WhatsApp
+    </button>
+  </div>
+
+  <div class="card">
+    <div class="img-box">48V Battery</div>
+    <h3>48V 24Ah Lithium Battery</h3>
+    <p>₹22,000</p>
+    <button class="btn" onclick="orderWhatsApp('48V 24Ah Lithium Battery','22000')">
+      Order on WhatsApp
+    </button>
+  </div>
+
+</div>
+
+<footer>
+  <p>📞 +91 6367384873</p>
+  <p>📧 sanwariyaenterprises45@gmail.com</p>
+  <p>📍 Dabok-Mavli Road, Opp. Bajaj Finance</p>
+</footer>
+
+<script>
+function orderWhatsApp(product, price) {
+  var phone = "916367384873";
+  var message = "Hello, mujhe " + product + " (₹" + price + ") order karni hai.";
+  
+  var url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
+
+  window.location.href = url;
+}
+</script>
+
+</body>
+</html>
